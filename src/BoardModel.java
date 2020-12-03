@@ -5,7 +5,7 @@ import java.util.Random;
  * @author Taylor McLaughlin
  * This class is the model of this MVC some kind of social deduction game.
  */
-public class Model extends Observable{
+public class BoardModel extends Observable{
 	
 	private Tile[][] board;
 	final int BOARD_WIDTH = 20;
@@ -17,7 +17,7 @@ public class Model extends Observable{
 	 * This constructor creates the board.
 	 * 
 	 */
-	public Model() {
+	public BoardModel() {
 		createBoard();
 	}
 	

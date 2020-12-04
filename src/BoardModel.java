@@ -71,4 +71,37 @@ public class BoardModel extends Observable{
 	public void shuffleBoard() {
 		createBoard();
 	}
+	
+	public Tile getTile(int row, int col) {
+		return board[col][row];
+	}
+	
+	/**
+	 * This function removes a player from a given tile
+	 * 
+	 * @param row - the row of the tile where the player will be removed
+	 * @param col - the column of the tile where the player will be removed
+	 * @param playerNumber - the identity of the player that will be removed
+	 * 
+	 */
+	public void removedPlayer(int row, int col, int playerNumber) {
+		board[col][row].removePlayer(playerNumber);
+	}
+	
+	/**
+	 * This function adds a player to a given tile
+	 * 
+	 * @param row - the row of the tile where the player will be added
+	 * @param col - the column of the tile where the player will be added
+	 * @param playerNumber - the identity of the player that will be added
+	 * 
+	 */
+	public void addPlayer(int row, int col, int playerNumber) {
+		board[col][row].addPlayer(playerNumber);
+	}
+	
+	
+	
+	
+	
 }

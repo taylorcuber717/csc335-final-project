@@ -48,4 +48,25 @@ public class Tile implements Serializable {
 		}
 		return this.isTaskCompleted;
 	}
+	
+	/**
+	 * Remove player from this tile.
+	 * 
+	 * @param playerNumber - identity of which player will be removed
+	 * 
+	 */
+	public void removePlayer(int playerNumber) {
+		this.players.remove(playerNumber);
+	}
+	
+	
+	/**
+	 * Add player to this tile.
+	 * 
+	 * @param playerNumber - identity of which player will be added
+	 * 
+	 */
+	public void addPlayer(int playerNumber) {
+		this.players.add(playerNumber);
+	}
 }
